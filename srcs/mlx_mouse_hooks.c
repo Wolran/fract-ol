@@ -21,13 +21,13 @@ static void	zoom_canvas(t_canvas *canvas, int button, int x, int y)
 		+ c_info->min.re;
 	mouse_im = (double)y / (WIN_HEIGHT / (c_info->max.im - c_info->min.im))
 		+ c_info->min.im;
-	if (button == SCROLL_UP)
+	if (button == SCROLL_DOWN || button == MOUSE_RIGHT)
 	{
 		if (canvas->max_iter > 4)
 			canvas->max_iter -= 4;
 		magnification = 1.0 / 0.8;
 	}
-	else if (button == SCROLL_DOWN)
+	else if (button == SCROLL_UP)
 	{
 		canvas->max_iter += 4;
 		magnification = 1.0 / 1.2;
@@ -40,7 +40,7 @@ static void	zoom_canvas(t_canvas *canvas, int button, int x, int y)
 
 int	mouse_press_hook(int button, int x, int y, t_canvas *canvas)
 {
-	if (button == SCROLL_UP || button == SCROLL_DOWN)
+	if (button == SCROLL_UP || button == SCROLL_DOWN || button == MOUSE_RIGHT)
 		zoom_canvas(canvas, button, x, y);
 	else if (button == MOUSE_LEFT)
 		canvas->is_pressed_mouse_left = true;

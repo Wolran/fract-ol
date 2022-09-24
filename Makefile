@@ -21,13 +21,13 @@ INCLUDES := includes
 all: $(NAME) 
 
 $(NAME): $(MLX_PATH) $(OBJDIR) $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) $(MLX_LIB) -L$(INCLIB) -lXext -lX11 -lm -lbsd
+	@$(CC) -o $(NAME) $(OBJS) $(MLX_LIB) -L$(INCLIB) -lXext -lX11 -lm -lbsd
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
 
 $(OBJDIR):
-	mkdir -p $@
+	@mkdir -p $@
 
 clean:
 	@${RM} ${OBJS}

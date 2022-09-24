@@ -15,9 +15,10 @@
 # define KEY_UP_ARROW 65362
 # define KEY_RIGHT_ARROW 65363
 # define KEY_DOWN_ARROW 65364
-# define SCROLL_UP 5
-# define SCROLL_DOWN 4
+# define SCROLL_UP 4
+# define SCROLL_DOWN 5
 # define MOUSE_LEFT 1
+# define MOUSE_RIGHT 3
 
 # define MOVE_RATIO 0.01
 # define WIN_WIDTH 1000
