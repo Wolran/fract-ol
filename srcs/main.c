@@ -21,8 +21,11 @@ void	update_fractal_c(t_canvas *canvas)
 
 int	main_loop(t_canvas *canvas)
 {
+	canvas->ticks++;
 	if (canvas->is_pressed_mouse_left)
 		update_fractal_c(canvas);
+	if ((canvas->ticks & 8) != 0)
+		return (0);
 	if (canvas->fractal_type == '0' || canvas->fractal_type == '2')
 		plot_mandelbrot_and_burningship(canvas);
 	else if (canvas->fractal_type == '1')

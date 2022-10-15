@@ -51,6 +51,13 @@ int	exit_canvas(int exit_code)
 
 int	key_press_hook(int keycode, t_canvas *canvas)
 {
+	if (keycode == XK_space)
+	{
+		if (canvas->sel_col < 6)
+			canvas->sel_col += 2;
+		else
+			canvas->sel_col = 0;
+	}	
 	if (keycode == KEY_ESC)
 		exit_canvas(EXIT_SUCCESS);
 	if (keycode == KEY_UP_ARROW || keycode == KEY_DOWN_ARROW
