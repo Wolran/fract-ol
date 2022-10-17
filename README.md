@@ -1,3 +1,3 @@
 # fract-ol
 
-![img] https://github.com/Wolran/fract-ol/blob/main/burning_ship.png
+ ![Alt text](https://github.com/Wolran/fract-ol/blob/main/burning_ship.png?raw=true "Title") 
