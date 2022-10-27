@@ -1,7 +1,7 @@
 # fract-ol
 
-Ce projet consiste à créer un petit logiciel
-d’exploration fractale. C
+Ce projet consiste à créer un logiciel
+d’exploration de fractale en C
 
 
 ![Alt text](https://github.com/Wolran/fract-ol/blob/main/mandelbrot.png?raw=true "Title") 
